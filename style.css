@@ -1,4 +1,4 @@
-body, html {
+    body, html {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -39,18 +39,33 @@ body, html {
       color: #666;
     }
 
-    #floating-button-container {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1600;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-      width: 220px;
-      pointer-events: auto;
-    }
+#floating-button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  width: 220px;
+  pointer-events: auto;
+}
+
+.map-button {
+  width: 100%;
+  padding: 6px 10px;          /* smaller padding for smaller buttons */
+  font-size: 12px;            /* smaller font */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
 
     .map-button {
       width: 100%;
@@ -87,9 +102,39 @@ body, html {
       background: #3b9c40;
     }
 
-    #reset-btn {
-      background: #e74c3c;
-    }
+
+
+/* Reset button styles */
+#reset-btn {
+  width: 100%;
+  padding: 8px 14px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;       /* slightly bigger font */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  cursor: pointer;
+  text-align: center;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  #floating-button-container {
+    top: 10px;
+    right: 10px;
+    width: auto;  /* auto width to fit content better */
+  }
+
+  #reset-btn {
+    font-size: 16px;      /* slightly bigger for easier tapping */
+    padding: 10px 16px;
+  }
+}
+
     #reset-btn:hover {
       background: #c0392b;
     }
