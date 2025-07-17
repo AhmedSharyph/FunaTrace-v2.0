@@ -1,4 +1,4 @@
-const GAS_URL = "https://script.google.com/macros/s/AKfycbzN-2Vf9ZOq_tFVehR_S91Go5vg4G3jRu3K0AQcUUiYrsQ2tX8HA_31YQWxG-cNJx7r/exec?type=address";
+ const GAS_URL = "https://script.google.com/macros/s/AKfycbzN-2Vf9ZOq_tFVehR_S91Go5vg4G3jRu3K0AQcUUiYrsQ2tX8HA_31YQWxG-cNJx7r/exec?type=address";
 
   const map = L.map('map').setView([6.14825, 73.2900194], 15);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
